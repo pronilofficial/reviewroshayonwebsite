@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>About – Review Roshayon</title>
+  <head>
+    <meta charset="utf-8" />
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <!-- Android / Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+    <!-- Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- Safari pinned tab (optional) -->
+    <link rel="mask-icon" href="icons/safari-pinned.svg" color="#ffcc00">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="theme-color" content="#ffcc00">
+    <meta name="msapplication-navbutton-color" content="#ffcc00">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="css/css2.css?family=Comic+Neue:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffcc00">
+    <!-- Apple iOS Support -->
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- iPhone X, XS, 11 Pro -->
+    <link rel="apple-touch-startup-image" href="splash/1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone XR, 11 -->
+    <link rel="apple-touch-startup-image" href="splash/828x1792.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)">
+    <!-- iPhone 11 Pro Max, XS Max -->
+    <link rel="apple-touch-startup-image" href="splash/1242x2688.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPhone 8, 7, 6S -->
+    <link rel="apple-touch-startup-image" href="splash/750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)">
+    <!-- iPhone 8 Plus, 7 Plus -->
+    <link rel="apple-touch-startup-image" href="splash/1242x2208.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)">
+    <!-- iPad Pro 12.9" -->
+    <link rel="apple-touch-startup-image" href="splash/2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1366px)">
+    <style>
+      :root {
+        --bg: #0f1224;
+        --card: #1c1f3a;
+        --accent: #ffcc00;
+        --text: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Comic Neue', cursive;
+        background: radial-gradient(circle at top, #1c1f3a, var(--bg));
+        color: var(--text);
+        padding-bottom: 140px;
+      }
+
+      .star {
+        position: fixed;
+        pointer-events: none;
+        z-index: 999999;
+      }
+
+      .star:before,
+      .star:after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '\2726';
+        font-size: 9px;
+      }
+
+      .star:before {
+        color: transparent;
+        text-shadow: 0 0 3px rgb(250, 250, 174);
+      }
+
+      .star:after {
+        background: yellow;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      header {
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, #ff0080, #7928ca);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, .4);
+      }
+
+      header .title {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      header .subtitle {
+        margin-top: .3rem;
+        font-size: .95rem;
+        opacity: .85;
+      }
+
+      .card {
+        background: var(--card);
+        border-radius: 18px;
+        padding: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .4);
+        transform: rotate(-1deg);
+        transition: transform .2s ease, box-shadow .2s ease;
+        position: relative;
+      }
+
+      .card:hover {
+        transform: rotate(0deg) scale(1.03);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .6);
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 14px;
+        margin-bottom: .8rem;
+      }
+
+      .card h3 {
+        font-size: 1.1rem;
+        margin: .5rem 0;
+      }
+
+      .menu-bar {
+        position: sticky;
+        top: 0;
+        z-index: 9998;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0.75rem 1rem;
+        background: #12142a;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+      }
+
+      .menu-bar a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 700;
+        font-size: 0.95rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 10px;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .menu-bar a:hover {
+        background: var(--accent);
+        color: #000;
+        transform: translateY(-1px);
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        position: relative;
+        background: linear-gradient(135deg, #ff0080, #7928ca);
+      }
+
+      .header-center {
+        text-align: center;
+      }
+
+      .header-title-image {
+        width: 60%;
+        max-width: 350px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .site-header h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      .site-header .subtitle {
+        margin-top: .3rem;
+        font-size: .95rem;
+        opacity: .85;
+      }
+
+      .header-icons {
+        position: absolute;
+        right: 1.5rem;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .header-icons img {
+        width: 26px;
+        height: 26px;
+        filter: invert(1);
+        opacity: .9;
+        transition: transform .2s ease, opacity .2s ease;
+      }
+
+      .header-icons img:hover {
+        transform: scale(1.15);
+        opacity: 1;
+      }
+
+      footer {
+        background: #0b0d1a;
+        border-top: 2px solid var(--accent);
+        padding: 2rem 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .footer-links a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      .footer-links a:hover {
+        color: var(--accent);
+      }
+
+      .footer-platforms {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .footer-platforms a {
+        background: var(--accent);
+        color: #000;
+        padding: 0.5rem 0.9rem;
+        border-radius: 10px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 0.85rem;
+      }
+
+      .footer-platforms a:hover {
+        transform: translateY(-1px);
+      }
+
+      .footer-disclaimer {
+        text-align: center;
+        font-size: 0.75rem;
+        line-height: 1.4;
+        opacity: 0.8;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .adsense-placeholder {
+        width: 100%;
+        max-width: 100%;
+        height: 90px;
+        /* Common banner height: 90px */
+        background: #f0f0f0;
+        border: 2px dashed #888;
+        color: #444;
+        font-size: 1rem;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem auto;
+        border-radius: 10px;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.1);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      #scrollTopBtn {
+        position: fixed;
+        bottom: 130px;
+        /* stays above audio player */
+        right: 20px;
+        background: var(--accent);
+        color: #000;
+        border: none;
+        outline: none;
+        padding: 14px 18px;
+        font-size: 1.1rem;
+        font-weight: 900;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+        z-index: 99999;
+        box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+      }
+
+      #scrollTopBtn.show {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+
+      #scrollTopBtn:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-center">
+        <img src="icons/header-logo.png" alt="Review Roshayon" class="header-title-image">
+        <p class="subtitle"> Comedy Podcast ● অসভ্যরকমের সত্য রিভিউ ● Audio Story Reviews </p>
+      </div>
+    </header>
+    <!-- MENU -->
+    <nav class="menu-bar">
+      <a href="index.html">Home</a>
+      <a href="about.html" style="color: var(--accent)">About</a>
+      <a href="copyright.html">Copyright</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="adsense-placeholder"> Google AdSense Banner (Test) </div>
+    <!-- ⭐ ABOUT PAGE CONTENT ⭐ -->
+    <main style="padding: 2rem; max-width: 900px; margin: auto;">
+      <h1 style="text-align:center; color: var(--accent); margin-bottom:1rem;"> About Review Roshayon </h1>
+      <!-- LOGO BEFORE ABOUT -->
+      <div style="text-align:center; margin-bottom: 2rem;">
+        <img src="icons/about-image.png" alt="Review Roshayon" style="width: 300px; height:auto;">
+      </div>
+      <div style="background: var(--card); padding: 1.5rem 2rem; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.4); line-height: 1.6; font-size: 1.05rem; text-align: justify;">
+        <p>It is an engaging collection of review episodes that takes a deep dive into the captivating realm of renowned Bengali audio programs. This show provides hilarious comedic entertainment with candid and mature commentary.</p>
+        <p>It is a raucous rollercoaster of a podcast, where hosts Sayan Ananda Sengupta, Pronil Halder, and Srinjoy Dutta embark on a wild journey through the world of Bengali audio shows and classic movies. Buckle up, because this show is anything but suitable for young audiences.</p>
+        <p>In each uproarious episode, this trio fearlessly dissects renowned Bengali audio shows like "Sunday's Suspense" and "Midnight Horror Station", as well as timeless classic Bengali movies. However, there's a twist – their reviews are peppered with side-splitting, non-veg humor that'll have you in stitches.</p>
+        <p>Sayan, Pronil, and Srinjoy don't hold back, offering explicit and adult-themed commentary that adds a spicy flavor to their critiques. Their discussions are liberally sprinkled with funny, non-veg references that leave no stone unturned in their quest for laughter.</p>
+        <p>
+          <strong>Review Roshayon is not for the faint of heart.</strong> It's a laugh-out-loud, no-holds-barred take on the audio shows and movies that Bengali audiences hold dear. Whether it's dissecting spine-chilling suspense or uproarious comedies, these hosts do it with humor that's as explicit as it is entertaining.
+        </p>
+        <p>So, if you're an adult with a penchant for Bengali audio entertainment and a taste for comedy that's on the risqué side, Review Roshayon is your ticket to a hilarious, no-nonsense review of your favorite shows and movies. Just be prepared to blush, chuckle, and maybe even guffaw your way through each episode.</p>
+      </div>
+      <!-- LINKS SECTION -->
+      <h2 style="text-align:center; margin-top:2.5rem; color:var(--accent);">Find Us On</h2>
+      <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap; margin-top:1rem;">
+        <a href="https://www.imdb.com/title/tt29194297/" target="_blank" style="background:var(--accent); color:#000; padding:0.7rem 1.2rem; border-radius:10px; font-weight:700; text-decoration:none;"> ⭐ IMDb Page </a>
+        <a href="https://open.spotify.com/show/3pD4DpYtdsjroKiATKS2YM" target="_blank" style="background:var(--accent); color:#000; padding:0.7rem 1.2rem; border-radius:10px; font-weight:700; text-decoration:none;"> 🎧 Spotify </a>
+        <a href="https://music.amazon.com/podcasts/d7b1965b-ed75-40ea-9acc-6ef1aa5bcc8a/review-roshayon" target="_blank" style="background:var(--accent); color:#000; padding:0.7rem 1.2rem; border-radius:10px; font-weight:700; text-decoration:none;"> 🎵 Amazon Music </a>
+      </div>
+    </main>
+    <footer>
+     <div class="footer-links">
+      <a href="about.html">
+       About
+     </a>
+     <a href="copyright.html">
+       Copyright
+     </a>
+     <a href="https://www.imdb.com/title/tt29194297/" rel="noopener" target="_blank">
+       IMDb
+     </a>
+     <a href="contact.html">
+       Contact
+     </a>
+   </div>
+      <div class="footer-platforms">
+        <a href="https://open.spotify.com/show/3pD4DpYtdsjroKiATKS2YM" rel="noopener" target="_blank"> 🎧 Listen on Spotify </a>
+        <a href="https://music.amazon.com/podcasts/d7b1965b-ed75-40ea-9acc-6ef1aa5bcc8a/review-roshayon" rel="noopener" target="_blank"> 🎵 Listen on Amazon Music </a>
+      </div>
+      <div class="footer-disclaimer"> © <span id="year"></span> Review Roshayon. All rights reserved. <br /> All podcast content, logos, and trademarks belong to their respective owners. The views and opinions expressed in the episodes are those of the hosts and guests and do not necessarily reflect the official policy or position of Review Roshayon. </div>
+    </footer>
+    <button id="scrollTopBtn">⬆</button>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const yearEl = document.getElementById('year');
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+      });
+      window.addEventListener('mousemove', function(e) {
+        var arr = [1, 0.9, 0.8, 0.5, 0.2];
+        arr.forEach(function(i) {
+          var x = (1 - i) * 75;
+          var star = document.createElement('div');
+          star.className = 'star';
+          star.style.top = e.clientY + Math.round(Math.random() * x - x / 2) + 'px';
+          star.style.left = e.clientX + Math.round(Math.random() * x - x / 2) + 'px';
+          document.body.appendChild(star);
+          window.setTimeout(function() {
+            document.body.removeChild(star);
+          }, Math.round(Math.random() * i * 600));
+        });
+      }, false);
+      document.addEventListener("DOMContentLoaded", () => {
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 300) {
+            scrollTopBtn.classList.add("show");
+          } else {
+            scrollTopBtn.classList.remove("show");
+          }
+        });
+        scrollTopBtn.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

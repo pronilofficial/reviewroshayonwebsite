@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+ Review Roshayon
+</title>
+<head>
+  <meta charset="utf-8"/>
+  <!-- Standard Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="icons/favicon-48.png">
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+
+  <!-- Android / Chrome -->
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192x192.png">
+
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Safari pinned tab (optional) -->
+  <link rel="mask-icon" href="icons/safari-pinned.svg" color="#ffcc00">
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="theme-color" content="#ffcc00">
+  <meta name="msapplication-navbutton-color" content="#ffcc00">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link href="css/css2.css?family=Comic+Neue:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#ffcc00">
+
+  <!-- Apple iOS Support -->
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- iPhone X, XS, 11 Pro -->
+  <link rel="apple-touch-startup-image" href="splash/1125x2436.png"
+  media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)">
+
+  <!-- iPhone XR, 11 -->
+  <link rel="apple-touch-startup-image" href="splash/828x1792.png"
+  media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)">
+
+  <!-- iPhone 11 Pro Max, XS Max -->
+  <link rel="apple-touch-startup-image" href="splash/1242x2688.png"
+  media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)">
+
+  <!-- iPhone 8, 7, 6S -->
+  <link rel="apple-touch-startup-image" href="splash/750x1334.png"
+  media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)">
+
+  <!-- iPhone 8 Plus, 7 Plus -->
+  <link rel="apple-touch-startup-image" href="splash/1242x2208.png"
+  media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)">
+
+  <!-- iPad Pro 12.9" -->
+  <link rel="apple-touch-startup-image" href="splash/2048x2732.png"
+  media="(min-device-width: 1024px) and (max-device-width: 1366px)">
+
+  <!-- Primary SEO Meta Tags -->
+  <meta name="title" content="Review Roshayon – Comedy Podcast & Audio Story Reviews">
+  <meta name="description" content="Bold, funny and honest reviews of audio stories, adult comedy podcasts and Bengali entertainment shows. অসভ্যরকমের সত্য রিভিউ – every week!">
+  <meta name="keywords" content="review roshayon, comedy podcast bengali, audio story reviews, bengali podcast review, adult comedy review, podcast analysis bangla">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://reviewroshayon.in/">
+
+  <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://reviewroshayon.in/">
+  <meta property="og:title" content="Review Roshayon – Comedy Podcast & Audio Story Reviews">
+  <meta property="og:description" content="Bold, funny and honest reviews of audio stories, adult comedy podcasts and Bengali entertainment shows. অসভ্যরকমের সত্য রিভিউ!">
+  <meta property="og:image" content="https://reviewroshayon.in/icons/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Mobile SEO -->
+  <meta name="theme-color" content="#ffcc00">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Review Roshayon">
+    <style>
+     :root {
+        --bg: #0f1224;
+        --card: #1c1f3a;
+        --accent: #ffcc00;
+        --text: #ffffff;
+      }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive;
+      background: radial-gradient(circle at top, #1c1f3a, var(--bg));
+      color: var(--text);
+      padding-bottom: 140px;
+    }
+
+    .star {
+      position: fixed;
+      pointer-events: none;
+    }
+
+    .star:before, .star:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '\2726';
+      font-size: 9px;
+    }
+
+    .star:before {
+      color: transparent;
+      text-shadow: 0 0 3px rgb(250, 250, 174);
+    }
+
+    .star:after {
+      background: yellow;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header {
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #ff0080, #7928ca);
+      box-shadow: 0 8px 30px rgba(0,0,0,.4);
+    }
+
+    header .title {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    header .subtitle {
+      margin-top: .3rem;
+      font-size: .95rem;
+      opacity: .85;
+    }
+
+    #episodes {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,.4);
+      transform: rotate(-1deg);
+      transition: transform .2s ease, box-shadow .2s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: rotate(0deg) scale(1.03);
+      box-shadow: 0 15px 40px rgba(0,0,0,.6);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: .8rem;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin: .5rem 0;
+    }
+
+    .play-btn {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      padding: .6rem 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    #player {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #0b0d1a;
+      padding: 1rem;
+      border-top: 2px solid #ffcc00;
+      z-index: 9999;
+    }
+
+    .player-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: .5rem;
+    }
+
+    #download-btn {
+      color: #ffcc00;
+      text-decoration: none;
+      font-size: .9rem;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: .5rem;
+    }
+
+    .controls button {
+      background: #ffcc00;
+      border: none;
+      padding: .5rem 1rem;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .timeline {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+    }
+
+    #progress {
+      flex: 1;
+    }
+
+    .resume-toast {
+      position: fixed;
+      bottom: 160px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #000;
+      padding: .6rem 1rem;
+      border-radius: 12px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity .3s ease;
+      z-index: 10000;
+
+      border: 3px solid #000;
+    }
+
+    .resume-toast.show {
+      opacity: 1;
+    }
+
+    .continue-label {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #00e5ff;
+      color: #000;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .menu-bar {
+      position: sticky;
+      top: 0;
+      z-index: 9998;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.75rem 1rem;
+      background: #12142a;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,.3);
+    }
+
+    .menu-bar a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 10px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .menu-bar a:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-1px);
+    }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      position: relative;
+      background: linear-gradient(135deg, #ff0080, #7928ca);
+    }
+
+    .header-center {
+      text-align: center;
+    }
+
+    .header-title-image {
+      width: 60%;
+      max-width: 350px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .site-header .subtitle {
+      margin-top: .3rem;
+      font-size: .95rem;
+      opacity: .85;
+    }
+
+    .header-icons {
+      position: absolute;
+      right: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .header-icons img {
+      width: 26px;
+      height: 26px;
+      filter: invert(1);
+      opacity: .9;
+      transition: transform .2s ease, opacity .2s ease;
+    }
+
+    .header-icons img:hover {
+      transform: scale(1.15);
+      opacity: 1;
+    }
+    
+    .new-label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #ff1100;
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 8px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      background: #0b0d1a;
+      border-top: 2px solid var(--accent);
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-platforms {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-platforms a {
+      background: var(--accent);
+      color: #000;
+      padding: 0.5rem 0.9rem;
+      border-radius: 10px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    .footer-platforms a:hover {
+      transform: translateY(-1px);
+    }
+
+    .footer-disclaimer {
+      text-align: center;
+      font-size: 0.75rem;
+      line-height: 1.4;
+      opacity: 0.8;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #player-title { flex: 1; font-size: .9rem; }
+
+    audio, video { width: 300px; }
+
+    .loader {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      animation: pulse 1.2s infinite;
+    }
+
+    .right-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    #volume {
+      width: 90px;
+      cursor: pointer;
+    }
+
+    .adsense-placeholder {
+      width: 100%;
+      max-width: 100%;
+      height: 90px; /* Common banner height: 90px */
+      background: #f0f0f0;
+      border: 2px dashed #888;
+      color: #444;
+      font-size: 1rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 1rem auto;
+      border-radius: 10px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 130px; /* stays above audio player */
+      right: 20px;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      outline: none;
+      padding: 14px 18px;
+      font-size: 1.1rem;
+      font-weight: 900;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, transform 0.3s, visibility 0.3s;
+      z-index: 99999;
+      box-shadow: 0 0 12px rgba(255, 204, 0, 0.6);
+    }
+
+    #scrollTopBtn.show {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+    }
+
+    #scrollTopBtn:hover {
+      transform: scale(1.2);
+    }
+  </style>
+ </head>
+ <body>
+  <header class="site-header">
+   <div class="header-center">
+    <img src="icons/header-logo.png" alt="Review Roshayon" class="header-title-image">
+    <p class="subtitle">
+    Comedy Podcast ● অসভ্যরকমের সত্য রিভিউ ● Audio Story Reviews
+    </p>
+   </div>
+   <div class="resume-toast" id="resumeToast">
+   </div>
+  </header>
+  <nav class="menu-bar">
+   <a href="/">
+    Home
+   </a>
+   <a href="about.html">
+    About
+   </a>
+   <a href="copyright.html">
+    Copyright
+   </a>
+   <a href="contact.html">
+    Contact
+   </a>
+  </nav>
+  <div class="adsense-placeholder">
+   Google AdSense Banner (Test)
+  </div>
+  <div class="loader" id="loading">
+   Loading episodes… 💥
+  </div>
+  <main id="episodes">
+  </main>
+  <div hidden="" id="player">
+   <div class="player-info">
+    <div id="player-title">
+    </div>
+    🔊
+    <input id="volume" max="1" min="0" step="0.01" type="range" value="1"/>
+    <a download="" id="download-btn" target="_blank">
+     ⬇ Download
+    </a>
+   </div>
+   <div class="controls">
+    <button id="rewind">
+     ⏪ 15s
+    </button>
+    <button id="playPause">
+     ▶
+    </button>
+    <button id="forward">
+     15s ⏩
+    </button>
+   </div>
+   <div class="timeline">
+    <span id="currentTime">
+     0:00
+    </span>
+    <input id="progress" type="range" value="0">
+     <span id="duration">
+      0:00
+     </span>
+    </input>
+   </div>
+   <audio id="audio">
+   </audio>
+  </div>
+  <script>
+  const episodesEl = document.getElementById('episodes');
+  const loadingEl = document.getElementById('loading');
+  const toast = document.getElementById('resumeToast');
+  const audio = document.getElementById('audio');
+  const player = document.getElementById('player');
+  const playerTitle = document.getElementById('player-title');
+  const playPauseBtn = document.getElementById('playPause');
+  const rewindBtn = document.getElementById('rewind');
+  const forwardBtn = document.getElementById('forward');
+  const progress = document.getElementById('progress');
+  const currentTimeEl = document.getElementById('currentTime');
+  const durationEl = document.getElementById('duration');
+
+  let page = 0;
+  const PAGE_SIZE = 10;
+  let items = [];
+  let loadingPage = false;
+  let channelImage = null;
+
+  async function fetchRSS() {
+    try {
+      const res = await fetch(
+        'https://podcast-rss-proxy.pronilofficial.workers.dev'
+      );
+
+      const text = await res.text();
+      const xml = new DOMParser().parseFromString(text, 'text/xml');
+
+      items = Array.from(xml.getElementsByTagName('item'));
+
+      channelImage =
+        xml.querySelector('channel > itunes\\:image')?.getAttribute('href') ||
+        'https://via.placeholder.com/600x600?text=Podcast';
+
+      loadingEl.remove();
+      loadNextPage();
+    } catch (err) {
+      loadingEl.textContent = '❌ Failed to load episodes';
+      console.error(err);
+    }
+  }
+
+  function loadNextPage() {
+    if (loadingPage) return;
+
+    const start = page * PAGE_SIZE;
+  if (start >= items.length) return; // stop when done
+
+  loadingPage = true;
+
+  const end = start + PAGE_SIZE;
+  const slice = items.slice(start, end);
+
+  slice.forEach(renderEpisode);
+  page++;
+
+  loadingPage = false;
+}
+
+  window.addEventListener('scroll', () => {
+    const nearBottom =
+    window.innerHeight + window.scrollY >=
+    document.body.offsetHeight - 300;
+
+    if (nearBottom && !loadingPage) {
+      loadNextPage();
+    }
+  });
+
+  let isFirstEpisode = true;
+
+  function renderEpisode(item) {
+    const title =
+    item.getElementsByTagName('title')[0]?.textContent || 'Untitled';
+
+    const enclosure = item.getElementsByTagName('enclosure')[0];
+    const mediaUrl = enclosure?.getAttribute('url');
+    const type = enclosure?.getAttribute('type') || '';
+
+    const itunesImage = item.getElementsByTagNameNS('*', 'image')[0];
+    const mediaThumb = item.getElementsByTagNameNS('*', 'thumbnail')[0];
+
+    const img =
+    itunesImage?.getAttribute('href') ||
+    mediaThumb?.getAttribute('url') ||
+    channelImage;
+
+    const card = document.createElement('div');
+    card.className = 'card';
+
+const savedProgress = Number(localStorage.getItem(key(mediaUrl)));
+
+const continueLabel =
+savedProgress > 5
+? `<div class="continue-label">CONTINUE LISTENING</div>`
+: '';
+
+card.innerHTML = `
+  ${isFirstEpisode ? '<div class="new-label">New Episode</div>' : ''}
+  ${continueLabel}
+  <img loading="lazy" src="${img}" />
+  <h3>${title}</h3>
+  <button class="play-btn">
+    ${savedProgress > 5 ? 'Continue ▶' : 'Play ▶'}
+  </button>
+`;
+
+    card.querySelector('button').addEventListener('click', () => {
+      playMedia(title, mediaUrl, type);
+    });
+
+    episodesEl.appendChild(card);
+
+    isFirstEpisode = false;
+  }
+
+
+  function formatTime(sec) {
+    const m = Math.floor(sec / 60);
+    const s = Math.floor(sec % 60).toString().padStart(2, '0');
+    return `${m}:${s}`;
+  }
+
+  function playMedia(title, url) {
+    player.hidden = false;
+    playerTitle.textContent = title;
+    audio.src = url;
+
+    const saved = Number(localStorage.getItem(key(url)));
+
+    audio.addEventListener('loadedmetadata', () => {
+      progress.max = audio.duration;
+      durationEl.textContent = formatTime(audio.duration);
+
+      if (saved > 5 && saved < audio.duration - 5) {
+        audio.currentTime = saved;
+        progress.value = saved;
+        showResume(saved);
+      }
+    }, { once: true });
+
+    audio.play();
+    playPauseBtn.textContent = '⏸';
+    document.getElementById('download-btn').href = url;
+  }
+
+  fetchRSS();
+
+  audio.addEventListener('loadedmetadata', () => {
+    progress.max = audio.duration;
+    durationEl.textContent = formatTime(audio.duration);
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    progress.value = audio.currentTime;
+    currentTimeEl.textContent = formatTime(audio.currentTime);
+    if (audio.src) {
+      localStorage.setItem(key(audio.src), audio.currentTime.toFixed(1));
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    localStorage.removeItem(key(audio.src));
+  });
+
+  progress.addEventListener('input', () => {
+    audio.currentTime = progress.value;
+  });
+
+  playPauseBtn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      playPauseBtn.textContent = '⏸';
+    } else {
+      audio.pause();
+      playPauseBtn.textContent = '▶';
+    }
+  });
+
+  rewindBtn.addEventListener('click', () => {
+    audio.currentTime = Math.max(0, audio.currentTime - 15);
+  });
+
+  forwardBtn.addEventListener('click', () => {
+    audio.currentTime = Math.min(audio.duration, audio.currentTime + 15);
+  });
+
+  function key(url) {
+    return `podcast-progress:${url}`;
+  }
+
+  function showResume(seconds) {
+    toast.textContent = `▶ Resuming from ${formatTime(seconds)}`;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const yearEl = document.getElementById('year');
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+  });
+
+  window.addEventListener('mousemove', function(e) {
+    var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+    arr.forEach(function(i) {
+      var x = (1 - i) * 75;
+      var star = document.createElement('div');
+
+      star.className = 'star';
+      star.style.top = e.clientY + Math.round(Math.random() * x - x / 2) + 'px';
+      star.style.left = e.clientX + Math.round(Math.random() * x - x / 2) + 'px';
+
+      document.body.appendChild(star);
+
+      window.setTimeout(function() {
+        document.body.removeChild(star);
+      }, Math.round(Math.random() * i * 600));
+    });
+  }, false);
+
+  const volumeSlider = document.getElementById('volume');
+
+// Set initial volume
+  audio.volume = 1;
+
+  volumeSlider.addEventListener('input', () => {
+    audio.volume = volumeSlider.value;
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.classList.add("show");
+      } else {
+        scrollTopBtn.classList.remove("show");
+      }
+    });
+
+    scrollTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+
+ // Keyboard controls
+document.addEventListener("keydown", (e) => {
+  // Space = Play / Pause (prevent page scroll)
+  if (e.code === "Space") {
+    e.preventDefault(); 
+    if (audio.paused) {
+      audio.play();
+      playPauseBtn.textContent = "⏸";
+    } else {
+      audio.pause();
+      playPauseBtn.textContent = "▶";
+    }
+  }
+
+  // ← Left arrow = Rewind 15s
+  if (e.code === "ArrowLeft") {
+    audio.currentTime = Math.max(0, audio.currentTime - 15);
+  }
+
+  // → Right arrow = Forward 15s
+  if (e.code === "ArrowRight") {
+    audio.currentTime = Math.min(audio.duration, audio.currentTime + 15);
+  }
+
+  // ↑ Up arrow = Volume up (increase 10%)
+  if (e.code === "ArrowUp") {
+    e.preventDefault();
+    audio.volume = Math.min(1, audio.volume + 0.1);
+    volumeSlider.value = audio.volume;
+  }
+
+  // ↓ Down arrow = Volume down (decrease 10%)
+  if (e.code === "ArrowDown") {
+    e.preventDefault();
+    audio.volume = Math.max(0, audio.volume - 0.1);
+    volumeSlider.value = audio.volume;
+  }
+});
+
+// Register PWA Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(() => console.log("Service Worker Registered"));
+}
+  </script>
+
+<!-- Schema.org JSON-LD (Google Rich Metadata) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Review Roshayon",
+  "url": "https://reviewroshayon.in/",
+  "description": "Bold, funny and honest reviews of audio stories, adult comedy podcasts and Bengali entertainment shows.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://reviewroshayon.in/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+  <div class="adsense-placeholder">
+   Google AdSense Banner (Test)
+  </div>
+  <footer>
+   <div class="footer-links">
+    <a href="about.html">
+     About
+    </a>
+    <a href="copyright.html">
+     Copyright
+    </a>
+    <a href="https://www.imdb.com/title/tt29194297/" rel="noopener" target="_blank">
+     IMDb
+    </a>
+    <a href="contact.html">
+     Contact
+    </a>
+   </div>
+   <div class="footer-platforms">
+    <a href="https://open.spotify.com/show/3pD4DpYtdsjroKiATKS2YM" rel="noopener" target="_blank">
+     🎧 Listen on Spotify
+    </a>
+    <a href="https://music.amazon.com/podcasts/d7b1965b-ed75-40ea-9acc-6ef1aa5bcc8a/review-roshayon" rel="noopener" target="_blank">
+     🎵 Listen on Amazon Music
+    </a>
+   </div>
+   <div class="footer-disclaimer">
+    ©
+    <span id="year">
+    </span>
+    Review Roshayon. All rights reserved.
+    <br/>
+    All podcast content, logos, and trademarks belong to their respective
+    owners. The views and opinions expressed in the episodes are those of the
+    hosts and guests and do not necessarily reflect the official policy or
+    position of Review Roshayon.
+   </div>
+  </footer>
+  <button id="scrollTopBtn">
+   ⬆
+  </button>
+ </body>
+</html>

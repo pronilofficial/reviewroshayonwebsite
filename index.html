@@ -881,6 +881,41 @@ if ('serviceWorker' in navigator) {
   }
 }
 </script>
+
+<button id="installBtn" style="display:none;">Install App</button>
+
+<script>
+let deferredPrompt;
+
+// Listen for the browser's install event
+window.addEventListener("beforeinstallprompt", (e) => {
+  console.log("🔥 beforeinstallprompt fired!");
+  e.preventDefault();
+  deferredPrompt = e;
+
+  // Show your custom button
+  document.getElementById("installBtn").style.display = "block";
+});
+
+// When user clicks install button
+document.getElementById("installBtn").addEventListener("click", async () => {
+  if (!deferredPrompt) return;
+
+  deferredPrompt.prompt();
+  const result = await deferredPrompt.userChoice;
+  console.log("User choice:", result.outcome);
+
+  // Hide the button after prompt
+  document.getElementById("installBtn").style.display = "none";
+  deferredPrompt = null;
+});
+
+// Hide button if already installed
+window.addEventListener("appinstalled", () => {
+  document.getElementById("installBtn").style.display = "none";
+});
+</script>
+
   <div class="adsense-placeholder">
    Google AdSense Banner (Test)
   </div>

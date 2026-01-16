@@ -502,6 +502,45 @@
     #scrollTopBtn:hover {
       transform: scale(1.2);
     }
+
+    #installBanner {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffcc00;
+      color: #000;
+      padding: 14px 20px;
+      border-radius: 14px;
+      font-weight: bold;
+      display: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+      z-index: 999999;
+      animation: slideUp 0.4s ease;
+    }
+
+    #installBanner button {
+      background: #000;
+      color: #ffcc00;
+      border: none;
+      padding: 8px 14px;
+      margin-left: 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #installBannerClose {
+      margin-left: 10px;
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    @keyframes slideUp {
+      from { transform: translate(-50%, 20px); opacity: 0; }
+      to { transform: translate(-50%, 0); opacity: 1; }
+    }
+
   </style>
  </head>
  <body>
@@ -882,37 +921,62 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 
-<button id="installBtn" style="display:none;">Install App</button>
+<div id="installBanner">
+  📱 Install Review Roshayon?
+  <button id="installNowBtn">Install</button>
+  <span id="installBannerClose">✖</span>
+</div>
 
 <script>
-let deferredPrompt;
+let deferredPrompt = null;
 
-// Listen for the browser's install event
+// Detect PWA already installed
+const isStandalone = window.matchMedia("(display-mode: standalone)").matches ||
+                     window.navigator.standalone === true;
+
 window.addEventListener("beforeinstallprompt", (e) => {
-  console.log("🔥 beforeinstallprompt fired!");
-  e.preventDefault();
-  deferredPrompt = e;
+    console.log("🔥 beforeinstallprompt fired!");
 
-  // Show your custom button
-  document.getElementById("installBtn").style.display = "block";
+    // Stop automatic mini-infobar
+    e.preventDefault();
+    deferredPrompt = e;
+
+    // If already installed or dismissed earlier → don't show banner
+    if (isStandalone) return;
+    if (localStorage.getItem("installBannerDismissed") === "1") return;
+
+    // Show banner
+    document.getElementById("installBanner").style.display = "flex";
 });
 
-// When user clicks install button
-document.getElementById("installBtn").addEventListener("click", async () => {
-  if (!deferredPrompt) return;
+// User clicks "Install"
+document.getElementById("installNowBtn").addEventListener("click", () => {
+    if (!deferredPrompt) return;
 
-  deferredPrompt.prompt();
-  const result = await deferredPrompt.userChoice;
-  console.log("User choice:", result.outcome);
+    deferredPrompt.prompt();
 
-  // Hide the button after prompt
-  document.getElementById("installBtn").style.display = "none";
-  deferredPrompt = null;
+    deferredPrompt.userChoice.then(choice => {
+        console.log("User choice:", choice.outcome);
+
+        // Always hide after interaction
+        document.getElementById("installBanner").style.display = "none";
+        deferredPrompt = null;
+    });
 });
 
-// Hide button if already installed
+// User closes banner
+document.getElementById("installBannerClose").addEventListener("click", () => {
+    document.getElementById("installBanner").style.display = "none";
+
+    // Do not show again for this session/day/etc.
+    localStorage.setItem("installBannerDismissed", "1");
+});
+
+// Remove banner permanently when installed
 window.addEventListener("appinstalled", () => {
-  document.getElementById("installBtn").style.display = "none";
+    console.log("📲 Installed!");
+    document.getElementById("installBanner").style.display = "none";
+    localStorage.removeItem("installBannerDismissed");
 });
 </script>
 
